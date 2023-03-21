@@ -62,7 +62,6 @@ namespace FFXIVUpdateChecker.Helper
             return oldColumnName.Equals(newColumnName);
         }
 
-
         private static DataTable GetDataTableFromCSVFile(string filePath)
         {
             DataTable dt = new DataTable();

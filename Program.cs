@@ -25,7 +25,7 @@ app.UseFileServer(new FileServerOptions {
 
 app.MapPost("/Check", async (CheckViewModel vm) =>
 {
-    return CSVHelper.CompareCSVColumns(vm.old_path, vm.new_path, false);
+    return FileHelper.CompareFiles(vm.old_path, vm.new_path);
 });
 
 app.RunAsDesktopTool();
