@@ -1,8 +1,8 @@
-﻿using FFXIVUpdateChecker.Model;
+﻿using FFXIVUCBLL.Model;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace FFXIVUpdateChecker.Helper
+namespace FFXIVUCBLL.Helper
 {
     public class FileHelper
     {

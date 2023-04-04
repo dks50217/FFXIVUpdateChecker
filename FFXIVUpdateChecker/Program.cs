@@ -3,10 +3,9 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.AspNetCore.StaticFiles;
 using Drk.AspNetCore.MinimalApiKit;
-using FFXIVUpdateChecker.Helper;
 using System.Runtime.InteropServices;
-using FFXIVUpdateChecker.Model;
-using FFXIVUpdateChecker.Helper;
+using FFXIVUCBLL.Model;
+using FFXIVUCBLL.Helper;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();

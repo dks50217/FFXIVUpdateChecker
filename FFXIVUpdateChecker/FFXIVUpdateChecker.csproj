@@ -15,4 +15,8 @@
      <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.7" />
    </ItemGroup>
 
+   <ItemGroup>
+     <ProjectReference Include="..\FFXIVUCBLL\FFXIVUCBLL.csproj" />
+   </ItemGroup>
+
 </Project>

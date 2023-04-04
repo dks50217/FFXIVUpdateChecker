@@ -1,8 +1,8 @@
-﻿using FFXIVUpdateChecker.Model;
+﻿using FFXIVUCBLL.Model;
 using System.Data;
 using System.Reflection;
 
-namespace FFXIVUpdateChecker.Helper
+namespace FFXIVUCBLL.Helper
 {
     public class CSVHelper
     {

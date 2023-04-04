@@ -20,7 +20,7 @@
     methods: {
         onSubmit(){
             vm.callAPI('../Check',this.form).load.then(function (response) {
-                console.log(response)
+                console.log('result', response);
             });            
         },
     },

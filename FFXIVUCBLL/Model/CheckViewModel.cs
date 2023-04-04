@@ -1,4 +1,4 @@
-namespace FFXIVUpdateChecker.Model
+namespace FFXIVUCBLL.Model
 {
     public class CheckViewModel
     {

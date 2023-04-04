@@ -1,4 +1,4 @@
-﻿namespace FFXIVUpdateChecker.Helper
+﻿namespace FFXIVUCBLL.Helper
 {
     public class ChangeHelper<T>
     {
