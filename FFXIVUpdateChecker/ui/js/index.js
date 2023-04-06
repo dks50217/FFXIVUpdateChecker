@@ -4,8 +4,21 @@
         return {
             form: {
                 old_path: "",
-                new_path: ""
-            }
+                new_path: "",
+            },
+            loading : false,
+            tableColumns: [
+                { label: 'FILE NAME', prop: 'FileName' },
+                { label: 'ADD', prop: 'AddCount' },
+                { label: 'REMOVE', prop: 'RemoveCount' },
+            ],
+            tableData: [],
+            options: [
+                { label: 'AddedItems', value: 'AddedItems' },
+                { label: 'RemovedItems', value: 'RemovedItems' },
+                { label: 'UpdatedItems', value: 'UpdatedItems' }
+            ],
+            actionType: ""
         }
     },
     components: {
@@ -19,9 +32,13 @@
     },
     methods: {
         onSubmit(){
-            vm.callAPI('../Check',this.form).load.then(function (response) {
+            let _self = this;
+            _self.loading = true;
+            vm.callAPI('../Check', this.form).load.then(function (response) {
                 console.log('result', response);
-            });            
+                _self.tableData = response;
+                _self.loading = false;
+            });
         },
     },
     mounted() {

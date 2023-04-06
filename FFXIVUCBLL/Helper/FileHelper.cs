@@ -29,7 +29,7 @@ namespace FFXIVUCBLL.Helper
                 CompareFileModel compareModel = new CompareFileModel();
                 var newFile = $"{new_folder}\\{item}";
                 var oldFile = $"{old_folder}\\{item}";
-                var model = CSVHelper.CompareCSVColumns(newFile, oldFile);
+                var model = CSVHelper.CompareCSVColumns(oldFile, newFile);
                 compareModel.FileName = item;
                 compareModel.CompareList = model;
                 summaryList.Add(compareModel);
