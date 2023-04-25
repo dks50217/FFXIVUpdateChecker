@@ -9,8 +9,9 @@
             loading : false,
             tableColumns: [
                 { label: 'FILE NAME', prop: 'FileName' },
-                { label: 'ADD', prop: 'AddCount' },
-                { label: 'REMOVE', prop: 'RemoveCount' },
+                { label: 'ADD', prop: 'AddedItems', type: 'count' },
+                { label: 'UPDATE', prop: 'UpdatedItems', type: 'count' },
+                { label: 'REMOVE', prop: 'RemovedItems', type: 'count' },
             ],
             tableData: [],
             options: [
@@ -18,7 +19,7 @@
                 { label: 'RemovedItems', value: 'RemovedItems' },
                 { label: 'UpdatedItems', value: 'UpdatedItems' }
             ],
-            actionType: ""
+            actionType: "AddedItems"
         }
     },
     components: {
@@ -40,6 +41,10 @@
                 _self.loading = false;
             });
         },
+        getCount(row, prop) {
+            let _self = this;
+            return row.CompareList.filter(c => c.ActionType == prop).length;
+        }
     },
     mounted() {
        
